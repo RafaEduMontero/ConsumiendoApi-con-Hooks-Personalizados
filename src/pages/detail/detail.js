@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import DetailField from '../../atomics/detail_field';
-import Books from '../../components/books';
+import Books from '../../paths/books';
 
 const Detail = props => {
 

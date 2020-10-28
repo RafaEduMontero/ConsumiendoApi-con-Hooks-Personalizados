@@ -1,6 +1,6 @@
 import React,{Fragment,useEffect,useState} from 'react';
 import CardField from '../atomics/card_field';
-import Books from './books';
+import Books from '../paths/books';
 
 const Book = () => {
 
