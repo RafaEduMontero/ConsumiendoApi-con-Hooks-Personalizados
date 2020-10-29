@@ -1,11 +1,14 @@
 import React,{useEffect,useState} from 'react';
 import DetailField from '../../atomics/detail_field';
 import Books from '../../paths/books';
+import {useParams} from 'react-router';
 
-const Detail = props => {
+const Detail = () => {
 
     const [book,setBook] = useState({});
-    const {match:{params:{id}}} = props;
+
+    const {id} = useParams();
+
     useEffect(() =>{
         fetch(Books.getBooks/`${id}`)
             .then((res) => res.json())
