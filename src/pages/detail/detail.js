@@ -1,26 +1,23 @@
-import React,{useEffect,useState} from 'react';
+import React from 'react';
+//detail
 import DetailField from '../../atomics/detail_field';
+//paths
 import Books from '../../paths/books';
+//react-router
 import {useParams} from 'react-router';
+//hooks
+import useFetch from '../../hooks/use_fetch'
+
+console.log(Books.getBooks)
 
 const Detail = () => {
 
-    const [book,setBook] = useState({});
-
     const {id} = useParams();
+    const [results,validate] = useFetch(Books.getBooks+`/${id}`)
 
-    useEffect(() =>{
-        fetch(Books.getBooks/`${id}`)
-            .then((res) => res.json())
-            .then(data =>{
-                setBook(data)
-            })
-    },)
-
- console.log(book)
  return (
    <div>
-     <DetailField book={book}/>       
+     {validate?(<DetailField book={results}/>):(<h3>loading...</h3>)}       
    </div>
  )
 }

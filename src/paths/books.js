@@ -1,5 +1,5 @@
 const Books = {
-    getBooks: 'https://jsonplaceholder.typicode.com/posts'
+    getBooks: 'https://jsonplaceholder.typicode.com/posts/'
 }
 
 Object.freeze(Books);

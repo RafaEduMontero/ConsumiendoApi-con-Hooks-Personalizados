@@ -1,5 +1,7 @@
 import React,{useState,Fragment} from 'react';
+//react-paginate
 import ReactPaginate from 'react-paginate';
+//atomics
 import Card from './card';
 
 const CardField = ({books}) => {
@@ -18,7 +20,6 @@ const CardField = ({books}) => {
     const PER_PAGE = 10;
     const offset = currentPage * PER_PAGE;
     const currenPageBooks = books.slice(offset, offset + PER_PAGE).map((book,i) =>{
-        console.log(book)
         
         return(
             <Card book={book} acortarTexto={acortarTexto} i={i}/>

@@ -1,13 +1,16 @@
 import React from 'react';
+//react-router
 import {
     BrowserRouter as Router,
     Route
   } from "react-router-dom";
+//components
 import Book from '../components/book';
 import AddUser from '../components/forms/user/add_user';
 import Users from '../components/forms/user/users';
 import MyHeader from '../components/my_header';
 import Welcome from '../components/welcome';
+//pages
 import Detail from '../pages/detail/detail';
 
 const Routes = () => {
